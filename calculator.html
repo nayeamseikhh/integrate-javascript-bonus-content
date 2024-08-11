@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<link rel="stylesheet" href="style.css">
+
+
+<body>
+    <h1 class="text-center">Simple Javascript Calculator</h1>
+    <div class="formstyle">
+        <form name="form1">
+            <input class="textview" name = "textview">
+        </form>
+        <center>
+            <table class="tables">
+                <tr>
+                    <td><input class="btn" type="button" value="C" onclick="form1.textview.value = ' ' "></td>
+                    <td><input class="btn" type="button" value="B" onclick="backspace()"></td>
+                    <td><input class="btn" type="button" value="/" onclick="insert('/')"></td>
+                    <td><input class="btn" type="button" value="*" onclick="insert('*')"></td>
+                </tr>
+                <tr>
+                 <td><input class="btn" type="button" value="7" onclick="insert(7)"></td>
+                 <td><input class="btn" type="button" value="8" onclick="insert(8)"></td>
+                 <td><input class="btn" type="button" value="9" onclick="insert(9)"></td>
+                 <td><input class="btn" type="button" value="-" onclick="insert('-')"></td>
+                 </tr>
+                 <tr>
+                 <td><input class="btn" type="button" value="4" onclick="insert(4)"></td>
+                 <td><input class="btn" type="button" value="5" onclick="insert(5)"></td>
+                 <td><input class="btn" type="button" value="6" onclick="insert(6)"></td>
+                 <td><input class="btn" type="button" value="+" onclick="insert('+')"></td> 
+                 </tr>
+                 <tr>
+                    <td><input class="btn" type="button" value="1" onclick="insert(1)"></td>
+                    <td><input class="btn" type="button" value="2" onclick="insert(2)"></td>
+                    <td><input class="btn" type="button" value="3" onclick="insert(3)"></td>
+                    <td rowspan="5"><input class="btn enter-btn" type="button" value="=" onclick="equal()"></td> 
+                 </tr>
+                 <tr>
+                    <td><input class="btn 0-btn" type="button" value="0" onclick="insert(0)"></td>
+                    <td><input class="btn 0-btn" type="button" value="00" onclick="insert('00')"></td>
+                    <td><input class="btn" type="button" value="." onclick="insert('.')"></td>
+                 </tr>
+
+            </table>
+        </center>
+    </div>
+ 
+
+    <script>
+
+        // Use insert() function to insert the number in textview.
+        function insert(num) 
+        {
+        document.form1.textview.value = document.form1.textview.value + num;
+        }
+        
+        // Use equal() function to return the result based on passed values.
+        function equal()
+        {
+        var exp = document.form1.textview.value;
+        if(exp)
+        {
+        document.form1.textview.value = eval(exp)
+        }
+        }
+        
+        /* Here, we create a backspace() function to remove the number at the end of the numeric series in textview. */
+        function backspace()
+        {
+        var exp = document.form1.textview.value;
+        document.form1.textview.value = exp.substring(0, exp.length - 1); /* remove the element from total length ? 1 */
+        }
+        
+        
+        </script>
+    
+
+
+</body>
+</html>

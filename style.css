@@ -1,0 +1,60 @@
+body{
+background-color: rgb(2, 24, 6);
+}
+h1 {  
+    text-align: center;  
+        padding: 23px;  
+        background: linear-gradient(to right, red,orange,yellow,green,rgb(77, 77, 242),rgb(172, 66, 247),violet);
+        color: transparent;
+        background-clip: text;
+        text-shadow: 1px 1px 20px gray;
+    }  
+input:hover  
+{  
+    background-color: rgb(249, 84, 241);  
+    }  
+    
+.formstyle  
+{  
+width: 700px;  
+height: 730px;  
+margin: 20px auto;  
+border: 0px solid skyblue;  
+border-radius: 10px;  
+box-shadow: 2px 2px 15px rgb(191, 190, 190);
+padding: 30px;  
+text-align: center;  
+background: rgb(77,0,124);
+background: linear-gradient(90deg, rgba(77,0,124,1) 0%, rgba(2,6,54,1) 100%);
+}  
+
+.textview{  
+    width: 600px; 
+    height: 75px; 
+    margin: 1px;  
+    font-size: 25px;  
+    padding: 5px;  
+    border: 0px;
+    border-radius: 5px;
+    background: rgb(168,240,129);
+    background: linear-gradient(90deg, rgb(73, 208, 0) 0%, rgb(130, 236, 108) 100%);
+    } 
+
+    .btn{  
+        width: 80px;  
+        height: 80px;  
+        font-size: 25px;  
+        margin: 20px;  
+        cursor: pointer;  
+        background-color: rgb(212, 1, 223);  
+        color: white;
+        border-radius: 10px;
+        box-shadow: 2px 2px 15px pink;
+    }
+    .tables{
+        margin-top: 10px;
+    }
+.enter-btn{
+    height: 200px;
+}
+   
